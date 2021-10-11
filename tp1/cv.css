@@ -1,25 +1,28 @@
- td {
-    border-bottom: 1px solid rgb(236, 210, 210);
-  }
+ 
   #table1 td{
-    border-bottom: 1px solid rgba(236, 210, 210, 0);
+    border-bottom: none;
   }
+  tr, td {
+    border: 1px solid rgb(236, 210, 210);
+    border-radius: 10px;
+  }
+  
   h1{
-    color:rgb(119, 83, 218);
+    color:rgb(190, 98, 167);
 }
   h2{
-      color:rgb(43, 20, 105);
+      color:rgb(129, 60, 141);
   }
   body
 {
     font-family: "Comic Sans MS";
 }
 a:link{
-    color:rgb(1, 0, 3);
+    color:rgb(8, 3, 8);
     text-decoration: none;
 }
   a:visited {
-    color:rgb(21, 9, 54);
+    color:rgb(129, 60, 141);
   }
   
   a:hover {
@@ -32,9 +35,20 @@ a:link{
     padding:50px;
   }
   body {
-    background-color: #f0e4ed;
+    background-image: url('Wallpaper.jpg');
+    background-size: cover;   
     font-size: 16px;
     margin-left:200px; margin-right:100px; margin-top:100px; margin-bottom:100px;
     max-width: 1000px;
 
+  }
+  #photo img {
+    border-radius: 50px;
+    
+  }
+  #photo {
+    padding: 2
+  }
+  #ing{
+    color:rgb(189, 112, 170);
   }
