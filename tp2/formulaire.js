@@ -1,4 +1,4 @@
-function validation ( )
+function validation ()
 {
 document.getElementById("resultat").setAttribute("hidden",'hidden');
 document.getElementById("error").setAttribute("hiden",'hidden');
@@ -25,7 +25,7 @@ document.getElementById("error").setAttribute("hiden",'hidden');
     }    
      else {
         document.getElementById("resultat").removeAttribute("hidden");
-        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#prenom").value;
+        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#nom").value;
 
      }
 
