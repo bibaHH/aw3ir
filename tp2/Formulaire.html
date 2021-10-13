@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TP2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        
+        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+        <link rel="stylesheet" href="form.css">
+        <script type="text/javascript" src="formulaire.js"></script>
+    </head>
+    <body>        
+        <h1 align="center">Saisie d'une fiche "Personne" </h1>
+        <!-- Add your site or application content here -->
+    <table>
+    <form id="form" method="post" >
+       <tr>
+        <td><label for="NOM">Nom</label></td>
+        <td><input id="NOM" type="text" name="nom" min="5" max="20" class="form"/></td>
+        </tr>
+        <tr>
+          <td>  <label for="PRENOM">Prénom</label></td>
+          <td> <input id="PRENOM" type="text" name="Prénom" min="5" max="20" class="form"/> </td>
+        </tr>
+        <tr>
+            <td>  <label for="dN">Date de naissance</label></td>
+            <td> <input id="dN" type="date" name="DateNaissance" placeholder="JJ/MM/AAAA" class="form" /></td>
+        </tr>
+        <tr>
+            <td><label for="ADP">Adresse Postale</label></td>  
+            <td><input id="ADP" type="text" name="AdresseP" min="5" max="50" class="form"/></td>  
+        </tr>
+        <tr>
+            <td> <label for="MAIL">Mail</label></td> 
+            <td> <input id="MAIL" type="email" name="AdresseMail" min="5" max="30" class="form"/></td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input id="button" type="button" value="Valider"/></td>
+        </tr>
+    </form>
+    </table>
+    <div id="error" hidden> 
+    </div> 
+    <div id="resultat" hidden> 
+    </div>
+    
+    </body>
+</html>
