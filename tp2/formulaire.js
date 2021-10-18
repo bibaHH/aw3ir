@@ -46,7 +46,7 @@ else if(document.getElementById("prenom").value.length < 5 ) {
   
      else {
         document.getElementById("resultat").removeAttribute("hidden");
-        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#prenom").value;
+        document.getElementById("resultat").innerHTML = "Bienvenue " + document.querySelector("#prenom").value + " " + document.querySelector("#nom").value;
 
      }
 
