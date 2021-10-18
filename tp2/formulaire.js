@@ -46,8 +46,11 @@ function validation() {
         document.getElementById("error").innerHTML = "Le mail doit contenir au moins 5 caractère !";
         document.getElementById("error").removeAttribute("hidden");
     }
+    else if (validateEmail(document.getElementById("mail").value) == false){
+        document.getElementById("error").innerHTML = "mail non valide";
+        document.getElementById("error").removeAttribute('hidden');
     
-
+    }
     else {
         document.getElementById("resultat").removeAttribute("hidden");
         const civ = document.querySelector('input[name="civilite"]:checked').value;
@@ -63,4 +66,9 @@ function updateMsg() {
     document.getElementById("resultat").innerHTML = "Bienvenue " + civ
         + "." + document.querySelector("#prenom").value + " " + document.querySelector("#nom").value;
 
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
