@@ -38,6 +38,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
             myModal.show();
 
         }
+        
 
     }
       
@@ -53,27 +54,10 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
     function validateDate() {
         const inputDate = document.getElementById('date').value;
     
-            let dateNaissance = new Date(inputDateD); // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#syntaxe
+            let dateNaissance = new Date(inputDate); // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/Date#syntaxe
             let dateNaissanceTimestamp = dateNaissance.getTime();
     
             let nowTimestamp = Date.now();
     
             return (dateNaissanceTimestamp < nowTimestamp)
     }
-
-/*Document.querySelector("#button").addEventListener("click", function(event){
-        event.preventDefault();
-        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-        const n=document.querySelector("#nom")  ;
-        const p=document.querySelector("#prenom");
-
-        if((n.value==="") || (n.value.length<5)){
-            document.querySelector(".modal-body").textContent = "Le nom doit avoir au moins 5 caractères";
-            myModal.show();
-        }
-
-        else if((p.value==="") || (p.value.length<5)){
-            document.querySelector(".modal-body").textContent = "Le prénom doit avoir au moins 5 caractères";
-            myModal.show();
-        }
-    }*/
