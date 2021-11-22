@@ -44,7 +44,7 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
             console.log('OK');
             document.querySelector(".modal-title").textContent = " Bienvenue " + document.getElementById("prenom").value;
             document.querySelector(".modal-body").innerHTML = " Vous etes né(e) le " + document.getElementById("date").value + " et vous habitez à ";
-            document.querySelector(".modal-body2").innerHTML = '<a href="http://maps.google.com/maps?q=Paris"><img src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=8&size=200x100&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/> </a>';
+            document.querySelector(".modal-body2").innerHTML = '<a href="http://maps.google.com/maps?q=Paris"><img src="https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=9&size=200x100&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"/> </a>';
 
 
             myModal.show();
