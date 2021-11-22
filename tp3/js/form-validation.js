@@ -38,7 +38,12 @@ window.onload = function () {   // ce code est exécuter une fois que toute la p
             myModal.show();
 
         }
-        
+        else {
+            console.log('erreur date');
+            document.querySelector(".modal-title").textContent = "Bienvenue" + document.getElementById("prenom").value;
+            document.querySelector(".modal-body").innerHTML = " Vous etes né(e) le " + document.getElementById("date").value + " et vous habitez à "   ;
+            myModal.show();
+        }
 
     }
       
