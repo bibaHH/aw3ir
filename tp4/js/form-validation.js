@@ -18,5 +18,5 @@ function validateDate() {
 
 
 function calcNbChar(id) {
-    document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length;
+    document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length + " car." ;
   }
