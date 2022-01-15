@@ -41,7 +41,7 @@ window.onload = function () {
     else {
       console.log('OK');
       document.querySelector(".modal-title").textContent = " Hello !! " + document.getElementById("prenom").value;
-      document.querySelector(".modal-body").innerHTML = " Vous  êtes  ajouté  à la liste";
+      document.querySelector(".modal-body").innerHTML = " Vous  êtes ajouté  à  la liste de nos contacts";
       contactStore.add(document.getElementById("prenom").value, document.getElementById("nom").value, document.getElementById("date").value, document.getElementById("adresse").value, document.getElementById("mail").value);
       localStorage.setItem('contactList', JSON.stringify(contactStore.getList()));
 
