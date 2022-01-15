@@ -13,7 +13,6 @@ window.onload = function () {
 
 
     if (document.getElementById("nom").value.length < 5) {
-      
       document.querySelector(".modal-title").textContent = "Erreur"
       document.querySelector(".modal-body").innerHTML = "Le champs NOM doit contenir au moins 5 caractères !";
       myModal.show();
@@ -22,21 +21,18 @@ window.onload = function () {
 
 
     else if (document.getElementById("prenom").value.length < 5) {
-      
       document.querySelector(".modal-title").textContent = "Erreur"
       document.querySelector(".modal-body").innerHTML = "Le champs Prénom doit contenir au moins 5 caractères !";
       myModal.show();
     }
 
     else if (document.getElementById("adresse").value.length < 5) {
-     
       document.querySelector(".modal-title").textContent = "Erreur"
       document.querySelector(".modal-body").innerHTML = "Le champs Prénom doit contenir au moins 5 caractères !";
       myModal.show();
     }
 
     else if (validateDate(date) == false) {
-     
       document.querySelector(".modal-title").textContent = "Erreur"
       document.querySelector(".modal-body").innerHTML = "revenez dans le passé !";
       myModal.show();
@@ -44,13 +40,12 @@ window.onload = function () {
     }
     else {
       console.log('OK');
-      document.querySelector(".modal-title").textContent = " Hello ! " + document.getElementById("nom").value;
-      document.querySelector(".modal-body").innerHTML = " Vous ajouté à la liste" ;
-      
+      document.querySelector(".modal-title").textContent = " Hello ! " + document.getElementById("prenom").value;
+      document.querySelector(".modal-body").innerHTML = " Vous  êtes ajouté à la liste";
       contactStore.add(document.getElementById("prenom").value, document.getElementById("nom").value, document.getElementById("date").value, document.getElementById("adresse").value, document.getElementById("mail").value);
       localStorage.setItem('contactList', JSON.stringify(contactStore.getList()));
-      
-      AfficherList();
+
+      AfficheList();
       myModal.show();
     }
   }
@@ -79,10 +74,11 @@ function validateDate() {
 function calcNbChar(id) {
   document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length + " car.";
 }
-function AfficherList() {
+function AfficheList() {
 
   var contactList = JSON.parse(localStorage.getItem("contactList"));
   for (var index in contactList) {
+
     document.querySelector("table tbody").innerHTML = document.querySelector("table tbody").innerHTML +
 
       '<tr>' +
