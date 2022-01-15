@@ -40,8 +40,8 @@ window.onload = function () {
     }
     else {
       console.log('OK');
-      document.querySelector(".modal-title").textContent = " Hello ! " + document.getElementById("prenom").value;
-      document.querySelector(".modal-body").innerHTML = " Vous  êtes ajouté à la liste";
+      document.querySelector(".modal-title").textContent = " Hello !! " + document.getElementById("prenom").value;
+      document.querySelector(".modal-body").innerHTML = " Vous  êtes  ajouté  à la liste";
       contactStore.add(document.getElementById("prenom").value, document.getElementById("nom").value, document.getElementById("date").value, document.getElementById("adresse").value, document.getElementById("mail").value);
       localStorage.setItem('contactList', JSON.stringify(contactStore.getList()));
 
@@ -90,3 +90,7 @@ function AfficheList() {
       '</tr>'
   }
 };
+
+function calcNbChar(id) {
+  document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length + " car.";
+}
