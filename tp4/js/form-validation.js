@@ -28,7 +28,7 @@ window.onload = function () {
 
     else if (document.getElementById("adresse").value.length < 5) {
       document.querySelector(".modal-title").textContent = "Erreur"
-      document.querySelector(".modal-body").innerHTML = "Le champs Prénom doit contenir au moins 5 caractères !";
+      document.querySelector(".modal-body").innerHTML = "Le champs Adresse doit contenir au moins 5 caractères !";
       myModal.show();
     }
 
