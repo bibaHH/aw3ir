@@ -6,7 +6,9 @@ body {
     color: white;
 }
 
-    
+.mydiv{
+    margin-bottom: 30px;
+}
 .form-control {         
     border-radius: 20px;
     font-family: "Comic Sans MS";
