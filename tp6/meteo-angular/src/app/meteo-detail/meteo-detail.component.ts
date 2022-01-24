@@ -27,9 +27,10 @@ export class MeteoDetailComponent implements OnInit {
   getMeteo(): void {
     const name = this.route.snapshot.paramMap.get('name');
     console.log('getmeteo',name);
+    if(name!=null){
     this.meteoService.getMeteo(name)
       .then(meteo => this.meteo = meteo)
       .catch(fail => this.meteo = fail);
   }
-
+  }
 }
