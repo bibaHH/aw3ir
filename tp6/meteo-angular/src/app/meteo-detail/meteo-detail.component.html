@@ -12,10 +12,10 @@
     </nav>
   
     <div class="card" style="width:300px; margin: 0 auto" v-if="meteo">
-      <div class="card-header">
-        {{meteo.name}} @{{meteo.dt | date:'H:mm'}}
+      <div class="text-danger card-header" align='center'>
+        {{meteo.name}} {{meteo.dt | date:'H:mm'}}
       </div>
-      <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
+      <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=12&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
         alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">
@@ -27,19 +27,19 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <i class="wi wi-cloud"></i> Nuage: {{meteo.clouds.all}}%
+          <i class=" text-danger wi wi-cloud"></i> Nuage: {{meteo.clouds.all}}%
         </li>
         <li class="list-group-item">
-          <i class="wi wi-humidity"></i> Humidité: {{meteo.main.humidity}}%
+          <i class="text-danger wi wi-humidity"></i> Humidité: {{meteo.main.humidity}}%
         </li>
         <li class="list-group-item">
-          <i class="wi wi-windy"></i> Vent: {{meteo.wind.speed}} km/h
+          <i class="text-danger wi wi-windy"></i> Vent: {{meteo.wind.speed}} km/h
         </li>
         <li class="list-group-item">
-          <i class="wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise}} // Date au format Timestamp à transformer au format 'H:mm'
+          <i class="text-danger wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise | date:'h:mm a'}} 
         </li>
         <li class="list-group-item">
-          <i class="wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset}} // Date au format Timestamp à transformer au format 'H:mm'
+          <i class="text-danger wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset | date:'h:mm a'}} 
         </li>
       </ul>
     </div>
@@ -49,6 +49,6 @@
   
     {{meteo.message}} (erreur {{meteo.cod}})
   </div>
+
+ 
   
-  
-  <hr> {{meteo | json}}
