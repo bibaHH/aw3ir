@@ -10,7 +10,6 @@ import { DatePipe } from '@angular/common';
   templateUrl: './meteo-detail.component.html',
   styleUrls: ['./meteo-detail.component.css']
 })
-
 export class MeteoDetailComponent implements OnInit {
 
   meteo : any;
@@ -28,11 +27,9 @@ export class MeteoDetailComponent implements OnInit {
   getMeteo(): void {
     const name = this.route.snapshot.paramMap.get('name');
     console.log('getmeteo',name);
-    if (name!=null){
     this.meteoService.getMeteo(name)
       .then(meteo => this.meteo = meteo)
       .catch(fail => this.meteo = fail);
-    }
   }
 
 }
